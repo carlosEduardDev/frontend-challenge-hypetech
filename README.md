@@ -4,7 +4,7 @@
 
 Olá, me chamo Carlos Eduardo, e aqui está meu trabalho feito sobre o desafio.
 
-## Mdificações
+## Modificações
 ## Tema e Layout
 
 A primeira grande reformulação foi na paleta de cores, desde o primeiro momento a ideia era ter uma seleção de temas. Com base nessa idéia desenvolvi o tema principal(ligth) usando da mesma cor do por do sol do iframe para o background e apostando na cor branca para destaque.<br> A fonte foi alterada para Poppins. <br><br>
