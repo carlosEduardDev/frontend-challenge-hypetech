@@ -8,7 +8,8 @@ type Props = {
 
 export default function CrashControl({ color }: Props) {
   return (
-    <div className="w-full flex justify-center flex-wrap md:flex-nowrap">
+    <div className="w-full flex justify-center flex-wrap h-full 
+    md:flex-nowrap">
       <MobileControl color={color} />
 
       <DesktopControl color={color} />

@@ -148,11 +148,11 @@ export default function CrashForm({
   ]
 
   return (
-    <div className="bg-black border border-gray-600 bg-opacity-20 border-opacity-20 crash-form w-full h-45 md:w-1/2 flex rounded-md p-3 relative">
+    <div className="bg-white dark:bg-black border border-gray-600 bg-opacity-20 border-opacity-20 w-full h-45  flex rounded-md p-3 relative items-center">
       <If condition={toggleSecond && !secondEnabled}>
         <button
           onClick={toggleSecond}
-          className={`btn border-none bg-[#ffffff] bg-opacity-10 btn-xs btn-circle absolute px-1 mt-1 right-3`}
+          className={`btn border-none bg-[#ffffff] bg-opacity-10 btn-xs btn-circle absolute px-1 mt-1 right-3 top-3`}
         >
           <PlusIcon className="h-4 w-4" />
         </button>
@@ -161,7 +161,7 @@ export default function CrashForm({
       <If condition={hideSelf}>
         <button
           onClick={() => hideSelf()}
-          className={`btn border-none btn-xs bg-[#ffffff] bg-opacity-10 hover:bg-opacity-95 btn-circle absolute px-1 mt-1 right-3`}
+          className={`btn border-none btn-xs bg-[#ffffff] bg-opacity-10 hover:bg-opacity-95 btn-circle absolute px-1 mt-1 right-3 top-3`}
         >
           <MinusIcon className="h-4 w-4" />
         </button>
@@ -170,7 +170,7 @@ export default function CrashForm({
       <form
         ref={formRef}
         method="POST"
-        className="w-full xl:w-[75%] mx-auto justify-center"
+        className="w-full mx-auto justify-center"
         onSubmit={(e) => submitTransaction(e)}
       >
         <input type="hidden" name="teste" />
@@ -213,7 +213,7 @@ export default function CrashForm({
                         transaction.status !=
                         TransactionStatus.UNREGISTERED
                       }
-                      className="btn btn-ghost min-h-0 flex-1 w-full h-full rounded text-xl font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
+                      className="btn bg-opacity-30 text-slate-800 dark:text-white bg-white dark:bg-black bg-opacity-30 min-h-0 flex-1 w-full h-full rounded text-xl font-normal disabled:bg-gray-800 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
                     >
                       &frac12;
                     </button>
@@ -227,7 +227,7 @@ export default function CrashForm({
                         transaction.status !=
                         TransactionStatus.UNREGISTERED
                       }
-                      className="btn btn-ghost min-h-0 grow w-full h-full rounded capitalize text-normal font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
+                      className="btn bg-opacity-30 text-slate-800 dark:text-white bg-white dark:bg-black min-h-0 grow w-full h-full rounded capitalize text-normal font-normal disabled:bg-gray-800 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
                     >
                       2x
                     </button>

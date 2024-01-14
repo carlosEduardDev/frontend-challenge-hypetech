@@ -1,22 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  transition: .1s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .motograu-game {
-  background: linear-gradient(133deg,#00000017 0%,#1c101d 50%,#462948a2 100%)!important;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 136, 186),
+    rgb(234, 170, 109),
+    rgb(59, 10, 58)
+  ) !important;
+}
+
+html.dark .motograu-game {
+  background: linear-gradient(
+    133deg,
+    #00000017 0%,
+    #1c101d 50%,
+    #78417ca2 100%
+  ) !important;
 }
 
 .motograu-game .transaction-bar {
-  --tw-bg-opacity: 0.20;
-  --tw-border-opacity: 0.20;
+  --tw-bg-opacity: 0.2;
+  --tw-border-opacity: 0.2;
 }
 
 .motograu-game .crash-form {
-  --tw-bg-opacity: 0.20;
-  --tw-border-opacity: 0.20;
+  --tw-bg-opacity: 0.2;
+  --tw-border-opacity: 0.2;
 }
 
 .motograu-game .results-bar {
-  background: linear-gradient(133deg,#00000017 0%,#1c101d 50%,#462948a2 100%)!important;
+  background: linear-gradient(
+    133deg,
+    #00000017 0%,
+    #1c101d 50%,
+    #462948a2 100%
+  ) !important;
 }
 
 .motograu-game .chat-container {
-  background: linear-gradient(133deg,#000000 0%,#1c101d 50%,#462948 100%)!important
- }
- 
+  background: rgba(102, 81, 117, 0.947);
+}
+
+html.dark .motograu-game .chat-container {
+  background: linear-gradient(
+    133deg,
+    #000000 0%,
+    #1c101d 50%,
+    #462948 100%
+  ) !important;
+}

@@ -10,7 +10,6 @@ type Props = {
 }
 
 import If from '../conditions/if'
-
 import {
   QuestionMarkCircleIcon,
   Bars3Icon,
@@ -37,11 +36,8 @@ export default function Navbar({
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
-  const {soundEnabled,
-        setSoundEnabled,
-        soundClick,
-        playerName
-        } = useContext(CrashGameContext)
+  const { soundEnabled, setSoundEnabled, soundClick, playerName } =
+    useContext(CrashGameContext)
 
   const handleSoundEnabled = (event) => {
     const { checked } = event.target
@@ -95,10 +91,35 @@ export default function Navbar({
       navigator.userAgent
     )
 
+  React.useEffect(() => {
+    localStorage.dark === 'dark'
+      ? document.documentElement.classList.add('dark')
+      : undefined
+  }, [])
+
   return (
     <div className="">
       <div className="navbar mx-auto  my-auto sm:px-3 h-12 flex items-center w-full justify-end">
-        <h1 className="self-center">{getGameLogo(game)}</h1>
+        <h1 className="self-center">
+          {getGameLogo(game)}
+          <span className="flex  items-center text-black dark:text-white text-sm/[12px] ml-5 before:content-[''] before:rounded-full before:ml-0.5 before:text-red-500 before:w-2 before:block before:h-2 before:mr-2 before:bg-lime-700 block text-sm font-medium text-slate-700 hidden sm:flex">
+            100
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-4 h-4 ml-1 text-black dark:text-white hidden sm:block"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+            />
+          </svg>
+        </h1>
 
         <div className="flex items-center ml-auto gap-2">
           <button
@@ -106,29 +127,27 @@ export default function Navbar({
               setShowModal(!showModal)
               soundClick()
             }}
-            className="btn btn-sm py-1 px-2 flex items-center text-gray-500 btn-warning gap-1 rounded-md capitalize text-sm font-normal"
+            className="btn btn-sm py-1 px-2 flex items-center text-gray-500 btn-black dark:btn-warning text-white gap-1 rounded-md capitalize text-sm font-normal"
           >
             <QuestionMarkCircleIcon className="h-5 w-5" />
             <span className="hidden sm:inline">Como Jogar?</span>
           </button>
 
-          <div className="text-sm text-center font-bold mr-1">
+          <div className="text-sm text-center text-black dark:text-white font-bold mr-1 border border-black dark:border-white btn-sm py-1 px-2 flex items-center gap-1 rounded-md capitalize text-sm font-normal">
             <span className="player-currency">R$</span>{' '}
             <span className="balance">{balance}</span>
           </div>
 
-          <div className="border-l h-6 border-gray-400 border-opacity-50"></div>
-
           <div className="dropdown dropdown-end" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
-              className="btn btn-sm px-1 btn-ghost"
+              className="btn btn-sm px-1 btn-ghost text-black dark:text-white"
             >
               <Bars3Icon className="w-6 h-6 bg-opacity-50" />
             </button>
 
             {isDropdownOpen && (
-              <div className="mt-2 menu menu-compact rounded py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10">
+              <div className="mt-2 menu menu-compact bg-opacity-0 rounded py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10 chat-container">
                 <div className="flex gap-4 p-4">
                   <img
                     src="https://api.multiavatar.com/NOME.svg"
@@ -181,22 +200,6 @@ export default function Navbar({
                     </label>
                   </div>
                 </div>
-                {/*     {<div className="px-2 text-xs item">
-                  <div className="form-control">
-                    <label className="label cursor-pointer">
-                      <span className="label-text text-xs opacity-90">Animação</span>
-                      <label className="relative inline-flex items-center cursor-pointer">
-                        <input
-                          type="checkbox"
-                          onChange={handleAnimationEnabled}
-                          checked={animationEnabled}
-                          className="sr-only peer"
-                        />
-                      <div className="w-8 h-4 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-transparent rounded-full peer bg-black peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:left-[0px] after:bg-gray-300 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-                    </label>
-                  </label>
-                </div>
-              </div>} */}
 
                 <div
                   className="px-3 cursor-pointer py-3 text-sm hover:font-bold text-xs item"
@@ -221,9 +224,8 @@ export default function Navbar({
               </div>
             )}
           </div>
-
           <button
-            className="btn btn-sm px-1 btn-ghost"
+            className="btn btn-sm px-1 btn-ghost text-black dark:text-white"
             onClick={() => {
               setShowChat(!showChat)
               soundClick()
@@ -231,6 +233,57 @@ export default function Navbar({
           >
             <ChatBubbleLeftIcon className="w-6 h-6 bg-opacity-50" />
           </button>
+          <label className="relative text-black inline-flex items-center cursor-pointer mb-1">
+            <input
+              onClick={() => {
+                if (
+                  document.documentElement.classList[0] === 'dark'
+                ) {
+                  document.documentElement.classList.remove('dark')
+                  localStorage.setItem('dark', '')
+                } else {
+                  document.documentElement.classList.add('dark')
+                  localStorage.setItem('dark', 'dark')
+                }
+              }}
+              type="checkbox"
+              value=""
+              className="sr-only peer"
+            />
+            <div className="w-10 h-5">
+              {document.documentElement.classList[0] == 'dark' ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="white"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                  />
+                </svg>
+              )}
+            </div>
+          </label>
         </div>
       </div>
 
@@ -242,7 +295,6 @@ export default function Navbar({
       />
 
       <Chat show={showChat} />
-
     </div>
   )
 }

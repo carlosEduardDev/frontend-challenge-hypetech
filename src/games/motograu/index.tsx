@@ -5,11 +5,11 @@ import Display from './components/display'
 import Snackbar from '@/core/components/snackbar'
 import Results from '@/core/components/results'
 import TransactionBar from '@/core/components/transaction-bar'
-import Controls from '@/core/components/controls/crash-control'
 import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
 import { SessionContext } from '@/core/providers/session.provider'
 import { GameStatus } from '@/core/providers/enums/game-status'
 import Navbar from '@/core/components/navbar'
+import { Message } from './components/message-visible/Message'
 
 function HomePage() {
   const { setLoading } = useContext<any>(SessionContext)
@@ -43,7 +43,8 @@ function HomePage() {
               <TransactionBar />
             </div>
 
-            <div className="col-span-12 sm:col-span-8 xl:col-span-9 relative order-1 sm:order-1 lg:order-2">
+            <div className="col-span-12 sm:col-span-8 xl:col-span-9 relative order-1 sm:order-1 lg:order-2 relative">
+              {<Message show={true} />}
               <div className="flex gap-3 h-full flex-col">
                 <Results />
 
@@ -54,11 +55,9 @@ function HomePage() {
                     src="/motograu/index.html"
                   ></iframe>
                   <div className="transform sm:translate-y-[-390px] translate-y-[-200px]">
-                    <Display color={'pink'} />
+                    <Display color={'rose'} />
                   </div>
                 </div>
-
-                <Controls color="lime" position={'center'} />
               </div>
 
               <Snackbar />

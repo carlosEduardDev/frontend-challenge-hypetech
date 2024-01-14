@@ -56,7 +56,6 @@ export default function BetsTab() {
             <UserIcon className="h-3.5 w-3.5" />
             <div className="text-sm">{registeredBets.length}</div>
           </div>
-
           <span className="text-sm">R$ {sum(registeredBets)}</span>
         </div>
       </section>

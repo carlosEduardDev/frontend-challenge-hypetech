@@ -43,13 +43,13 @@ export default function Tabs({
 }: Props) {
   return (
     <div
-      className={`tabs p-1 rounded bg-gray-700 bg-opacity-20 flex w-full justify-center`}
+      className={`p-1 rounded bg-white bg-opacity-30 text-black dark:bg-black flex w-full justify-center`}
     >
       {tabs.map((tab) => {
         return (
           <a
             key={tab.key}
-            className={`tab tab-sm flex max:w-[50%]   items-center text-xs font-medium ${size} ${
+            className={`tab tab-sm flex max:w-[50%] text-black dark:text-white items-center text-xs font-medium ${size} ${
               active == tab.key
                 ? `rounded bg-gray-700 bg-opacity-25 text-gray-300`
                 : ''

@@ -56,7 +56,8 @@ export const Chat = ({ show }: Props) => {
               return (
                 <>
                   <If condition={data.userId == session.userId}>
-                    <div className="chat chat-end" key={idx}>
+                    <div className="chat chat-end break-words" key={idx}>
+                    
                       <div className="chat-image avatar">
                         <div className="w-5 rounded-full">
                           <img src="https://www.fiscalti.com.br/wp-content/uploads/2021/02/default-user-image.png" />
@@ -65,6 +66,7 @@ export const Chat = ({ show }: Props) => {
 
                       <div className="chat-bubble min-h-0">
                         {data.message}
+                        
                       </div>
                       <div className="chat-footer text-xs opacity-50">
                         {dateToHumanReadable(data.createdAt)}
@@ -73,7 +75,7 @@ export const Chat = ({ show }: Props) => {
                   </If>
 
                   <If condition={data.userId != session.userId}>
-                    <div className="chat chat-start" key={idx}>
+                    <div className="chat chat-start break-words" key={idx}>
                       <div className="chat-image avatar">
                         <div className="w-5 rounded-full">
                           <img src="https://www.fiscalti.com.br/wp-content/uploads/2021/02/default-user-image.png" />

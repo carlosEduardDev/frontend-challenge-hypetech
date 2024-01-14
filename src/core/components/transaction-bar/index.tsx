@@ -15,14 +15,14 @@ export default function TransactionBar({ variant }: Props) {
   const [activeTab, setActiveTab] = useState('bets')
 
   const tabs: Tab[] = [
-    { key: 'bets', title: 'Apostas' },
+    { key: 'bets', title: 'Apostar' },
+    { key: 'best', title: 'Jogadores' },
     { key: 'history', title: 'Histórico' },
-    // { key: 'best', title: 'Estatísticas' },
   ]
 
   return (
     <div className="h-full py-8">
-      <div className="flex flex-col transaction-bar min-h-[400px] flex-1 grow h-full w-full p-3 rounded-md bg-black bg-opacity-20 border border-gray-600 border-opacity-20 relative ">
+      <div className="flex flex-col min-h-[400px] flex-1 grow h-full w-full p-3 rounded-md bg-gray-800 border border-gray-600 border-opacity-20 relative bg-opacity-30 dark:bg-opacity-0">
         <section className="w-full flex justify-center ">
           <div className="w-full sm:w-[90%]">
             <Tabs
@@ -36,7 +36,7 @@ export default function TransactionBar({ variant }: Props) {
         </section>
 
         <If condition={activeTab == 'bets'}>
-          <BetsTab />
+          <BestTab />
         </If>
 
         <If condition={activeTab == 'history'}>
@@ -44,7 +44,7 @@ export default function TransactionBar({ variant }: Props) {
         </If>
 
         <If condition={activeTab == 'best'}>
-          <BestTab />
+          <BetsTab />
         </If>
       </div>
       <Footer />

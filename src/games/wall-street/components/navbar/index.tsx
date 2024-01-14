@@ -137,7 +137,8 @@ export default function Navbar({
             </button>
 
             {isDropdownOpen && (
-              <div className="mt-2 menu menu-compact rounded py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10">
+              <div className="mt-2 menu menu-compact rounded py-2 w-[280px]
+              max-w-[300px] absolute top-[30px] right-[30px] z-10">
                 <div className="flex gap-4 p-4">
                   <img
                     src="https://www.fiscalti.com.br/wp-content/uploads/2021/02/default-user-image.png"

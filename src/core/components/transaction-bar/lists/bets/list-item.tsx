@@ -20,7 +20,7 @@ export default function ListItem({ data }: Props) {
 
   return (
     <div
-      className={`flex items-center rounded mb-1 border text-xs border-transparent p-1.5 gap-1 ${
+      className={`flex bg-white bg-opacity-30 dark:bg-opacity-10 text-slate-900 dark:text-white items-center rounded mb-1 border text-xs border-transparent p-1.5 gap-1 ${
         isGreen
           ? 'border-green-700 bg-green-600 bg-opacity-20'
           : ' border-gray-700 bg-gray-600 bg-opacity-20'

@@ -10,7 +10,7 @@ export default function DesktopControl({ color }: Props) {
   const [second, setSecond] = useState<boolean>(true)
 
   return (
-    <div className="hidden w-full gap-3 justify-center flex-wrap md:flex-nowrap md:flex">
+    <div className="hidden w-full gap-3 justify-center flex-wrap md:flex">
       <CrashForm
         color={color}
         secondEnabled={second}
