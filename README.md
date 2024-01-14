@@ -4,13 +4,13 @@
 
 <img src="https://hypetech.games/assets/images/branding/dark.png" alt="Hypetech" width="350"/>
 
-Olá, me chamo Carlos, e aqui está meu trabalho feito sobre o desafio.
+Olá, me chamo Carlos Eduardo, e aqui está meu trabalho feito sobre o desafio.
 
 ## Principais modificações
 
 ### Tema e Layout
 
-A primeira grande reformulação foi na paleta de cores, desde o primeiro momento a ideia era ter uma seleção de temas. Com base nessa idéia desenvolvi o tema principal(ligth) usando da mesma cor do por do sol do iframe para o background e apostando na cor branca para destaque. <br><br>
+A primeira grande reformulação foi na paleta de cores, desde o primeiro momento a ideia era ter uma seleção de temas. Com base nessa idéia desenvolvi o tema principal(ligth) usando da mesma cor do por do sol do iframe para o background e apostando na cor branca para destaque.<br> A fonte foi alterada para Poppins. <br><br>
 
 ![Tema Ligth MotoGrau](https://i.ibb.co/vd0SZf1/Captura-de-tela-2024-01-14-155448.png)
 
@@ -50,6 +50,6 @@ No canto inferior direito sempre será exibida a última mensagem enviada no cha
 *Todas as features antigas foram mantidas.
 
 ### Considerações Finais
-Foi um ótimo desafio, acho que tive um bom desempenho para conseguir resolver os problemas que identifiquei. Meu maior desafio foi em como modificar/acrescentar coisas sem atrapalhar a experência da jogatina, mas creio que me sai bem. <br>
-Nesse projeto não usei nada externo além do que já existia, nunca havia trabalhado com o taillwind mas me desafiei com ele.<br>
+Foi um ótimo desafio, acho que tive um bom desempenho para conseguir resolver os problemas que identifiquei. Meu maior desafio foi em como modificar/acrescentar coisas sem atrapalhar a experiência da jogatina, mas creio que me sai bem. <br>
+Nesse projeto não usei nada externo além do que já existia, nunca havia trabalhado com o taillwind, mas me desafiei com ele.<br>
 Fico por aqui, obrigado pela oportunidade !
