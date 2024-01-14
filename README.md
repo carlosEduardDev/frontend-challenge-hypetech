@@ -1,14 +1,11 @@
-
-
-# Apresentação do Projeto
+# Apresentação do Projeto <br> Jogo escolhido - Moto Grau
 
 <img src="https://hypetech.games/assets/images/branding/dark.png" alt="Hypetech" width="350"/>
 
 Olá, me chamo Carlos Eduardo, e aqui está meu trabalho feito sobre o desafio.
 
-## Principais modificações
-
-### Tema e Layout
+## Mdificações
+## Tema e Layout
 
 A primeira grande reformulação foi na paleta de cores, desde o primeiro momento a ideia era ter uma seleção de temas. Com base nessa idéia desenvolvi o tema principal(ligth) usando da mesma cor do por do sol do iframe para o background e apostando na cor branca para destaque.<br> A fonte foi alterada para Poppins. <br><br>
 
@@ -24,7 +21,7 @@ Outra mudança foi a disposição dos elementos na tela, criei uma nova tab "apo
 
 <br>
 
-### Ligth/Dark
+## Ligth/Dark
 
 No canto direito do cabeçalho temos um novo icone de ação, um svg de lua (ou sol no dark) indicando a póssivel troca de tema. 
 <br><br>
@@ -35,13 +32,13 @@ Esse é o visual do tema Dark: <br><br>
 <br><br>
 A seleção do tema é salva em localStorage, sendo assim uma preferência do usuário que sempre é mantida após refresh da página.
 
-### Players Online
+## Players Online
 
 Ao lado da logo, um contador de players online bem minimalista.
 <br><br>
 ![players online](https://i.ibb.co/X4bWSzV/Captura-de-tela-2024-01-14-155749.png)
 
-### Chat Visível
+## Chat Visível
 
 No canto inferior direito sempre será exibida a última mensagem enviada no chat.
 <br><br>
