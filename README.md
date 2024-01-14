@@ -1,4 +1,4 @@
-# Apresentação do Projeto <br> Jogo escolhido - Moto Grau
+# Apresentação do Projeto <br> Jogo escolhido: Moto Grau
 
 <img src="https://hypetech.games/assets/images/branding/dark.png" alt="Hypetech" width="350"/>
 
